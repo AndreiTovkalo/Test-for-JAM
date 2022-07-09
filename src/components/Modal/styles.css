@@ -22,9 +22,10 @@
 .modalContent{
     padding: 20px;
     /*height: 60vh;*/
-    width: 40vw;
+    width: 32vw;
     background-color: white;
     border-radius: 30px;
+
 }
 
 img{

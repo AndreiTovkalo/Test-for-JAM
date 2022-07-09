@@ -43,10 +43,10 @@ function PictureModal({picture, setActive, active, comments}){
 
                 <p className={styles.error}>{error}</p>
 
-                <div className={styles.comments}>
                 <p>{comments.length === 1? `${comments.length} comment` : `${comments.length} comments`} </p>
+
+                <div className={styles.comments}>
                 {comments.length !== 0 ? comments.map((item)=> <Comment key={item.id} time={item.date} >{item.text}</Comment>) : ""}
-                <Comment children="Nice photo"/>
                 {/*<Comment>*/}
                 {/*    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dicta dolorum eos exercitationem expedita facilis fuga illo ipsum labore magni minima molestias natus, nobis non officiis, quaerat quam, veniam!*/}
                 {/*</Comment>*/}
@@ -56,9 +56,9 @@ function PictureModal({picture, setActive, active, comments}){
                 {/*    <Comment>*/}
                 {/*        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dicta dolorum eos exercitationem expedita facilis fuga illo ipsum labore magni minima molestias natus, nobis non officiis, quaerat quam, veniam!*/}
                 {/*    </Comment>*/}
-                {/*    <Comment>*/}
-                {/*        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dicta dolorum eos exercitationem expedita facilis fuga illo ipsum labore magni minima molestias natus, nobis non officiis, quaerat quam, veniam!*/}
-                {/*    </Comment>*/}
+                    <Comment>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cumque dicta dolorum eos exercitationem expedita facilis fuga illo ipsum labore magni minima molestias natus, nobis non officiis, quaerat quam, veniam!
+                    </Comment>
                 </div>
             </div>
         </Modal>

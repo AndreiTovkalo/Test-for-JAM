@@ -3,6 +3,11 @@
     font-size: 14px;
 }
 
+.comments{
+    height: 16vh;
+    overflow: auto;
+}
+
 
 @media (max-width: 400px) {
     .comments{
