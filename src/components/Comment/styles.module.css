@@ -1,0 +1,30 @@
+.comment{
+    margin: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.avatar{
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    margin-right: 10px;
+}
+
+.text{
+    max-width: 340px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgba(1,1,1,0.075);
+}
+
+.date{
+    font-size: 10px;
+    margin-left: 10px;
+    color: rgba(1,1,1,0.3)
+}
+
+.date:hover{
+    color: rgba(1,1,1,0.8);
+}

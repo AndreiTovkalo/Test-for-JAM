@@ -1,0 +1,44 @@
+.card{
+    transition-duration: 0.3s;
+
+    margin: 0.8vh 0.6vw;
+
+    border-radius: 10px;
+
+    /*height: 200px;*/
+    /*width: 300px;*/
+
+    width: 23%;
+
+}
+
+@media (max-width: 1200px){
+    .card{
+        width: 31%;
+    }
+}
+
+@media (max-width: 992px){
+    .card{
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px){
+    .card{
+        width: 100%;
+    }
+}
+
+
+.card:hover{
+    transform: scale(1.17);
+    border-radius: 12%;
+    transition-duration: 0.4s;
+    z-index: 1;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
