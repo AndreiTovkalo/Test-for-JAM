@@ -18,11 +18,11 @@ header {
     margin: 3vh auto;
 }
 
-.pos{
-    position: fixed;
-    top: calc(50% - 40px);
-    left: calc(50% - 40px);
-}
+/*.pos{*/
+/*    position: fixed;*/
+/*    top: calc(50% - 40px);*/
+/*    left: calc(50% - 40px);*/
+/*}*/
 
 
 /*.visible {*/

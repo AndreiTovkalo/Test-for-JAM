@@ -1,7 +1,5 @@
-import {useState, useRef} from 'react'
+import {useState} from 'react'
 import styles from './styles.module.css'
-import setResource from "../../requests/setResource";
-import endpoints from "../../endpoints/endpoints";
 
 
 function CommentForm({sendComment}){

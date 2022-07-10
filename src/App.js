@@ -1,37 +1,30 @@
 import './App.css';
-import {useEffect, useState} from 'react'
-import endpoints from "./endpoints/endpoints";
-import getResourse from "./requests/getResourse";
+import {useEffect, useState, useRef} from 'react'
 import PictureCard from "./components/PictureCard/PictureCard";
 import PictureList from "./components/PictureList/PictureList";
 import PictureModal from "./components/PictureModal/PictureModal";
 import Loader from './components/Loader/Loader'
-
+import {getPictures} from "./utils/api";
 
 function App() {
 
     const [pictures, setPictures] = useState([]);
-    const [modalActive, setModalActive] = useState(false);
-    const [comments, setComments] = useState([]);
-    const [bigPicture, setBigPicture] = useState({});
+    const modalRef = useRef(null);
+
+
 
   useEffect(()=> {
-      let getPictures = async() => {
-          let responsePictures = await getResourse(endpoints.getPictures());
-          console.log(responsePictures);
-          setPictures(responsePictures);
+      let setPicturesInfo = async() => {
+          let responsePictures = await getPictures();
+          setPictures(responsePictures.data);
       }
-      getPictures();
+      setPicturesInfo();
 
   }, [])
 
 
     let handleClick = async(id) =>{
-      let responsePicture = await getResourse(endpoints.getBigPicture(id));
-      setBigPicture(responsePicture);
-      setComments(responsePicture.comments);
-      setModalActive(true);
-      console.log(responsePicture.comments)
+      modalRef.current.open(id);
     }
 
 
@@ -41,7 +34,7 @@ function App() {
         <div className='wrapper'>
             {pictures.length ? <PictureList pictureArray={pictures} handleClick={handleClick}/> : <div className='pos'><Loader/></div> }
         </div>
-        <PictureModal active={modalActive} setActive={setModalActive} picture={bigPicture} comments={comments}/>
+        <PictureModal ref={modalRef}/>
 
 
         <style>
